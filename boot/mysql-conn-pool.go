@@ -1,4 +1,4 @@
-package tools
+package boot
 
 import (
 	"fzw/fxxkModel/conf"
