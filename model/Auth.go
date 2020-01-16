@@ -3,7 +3,7 @@ package model
 import "time"
 
 // 权限表
-type Auths struct { 
+type Auth struct { 
 	Id  int  `json:"id"`  
 	AuthName  string  `json:"auth_name"`  // 权限名称
 	CreatedAt  time.Time  `json:"created_at"`  
