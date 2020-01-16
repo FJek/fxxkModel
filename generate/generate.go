@@ -14,7 +14,9 @@ import (
 /*
 	生成model结构体
 */
-func Generate(tableNames ...string) {
+func Generate() {
+
+	tableNames := conf.TableNames.Names
 	// 生成表信息
 	tableNamesStr := ""
 	for _, name := range tableNames {

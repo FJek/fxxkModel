@@ -1,7 +1,9 @@
 package conf
 
+/**
+配置文件
+ */
 
-// todo 配置表名
 
 
 // 文件生成的路径
@@ -9,6 +11,19 @@ const ModelPath = "./model/"
 
 // 是否覆盖已存在model
 const ModelReplace = true
+
+/**
+表名配置
+ */
+type BaseTables struct {
+	Names []string
+}
+/**
+表名实例
+ */
+var TableNames BaseTables = BaseTables{
+	Names: []string{"auths","menus"},
+}
 
 /**
 数据库配置
