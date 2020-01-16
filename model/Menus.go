@@ -1,5 +1,7 @@
 package model
 
+import "time"
+
 // 后台菜单表
 type Menus struct { 
 	Id  string  `json:"id"`  // 菜单ID
