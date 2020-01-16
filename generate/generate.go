@@ -144,7 +144,7 @@ func getFieldType(field Field) string {
 func getField(tableName string) []Field {
 	// show full columns from auths
 	var fields []Field
-	tools.GetDB().Raw("show full columns from " + tableName).Find(&fields)
+	tools.GetDB().Raw("show full columns from " + tableName+"s").Find(&fields)
 	return fields
 }
 
@@ -161,6 +161,10 @@ func getTables(tableNamesStr string) []Table {
 			Raw("select table_name as name ,table_comment as comment " +
 				"from information_schema.TABLES where TABLE_NAME in (" + tableNamesStr + ")").
 			Find(&tables)
+	}
+	// 去掉 表尾的's'
+	for i,table := range tables {
+		tables[i].Name = table.Name[:len(table.Name)-1]
 	}
 	return tables
 }
