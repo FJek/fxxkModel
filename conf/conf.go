@@ -22,7 +22,7 @@ type BaseTables struct {
 表名实例
  */
 var TableNames BaseTables = BaseTables{
-	Names: []string{"auths","menus"},
+	Names: []string{"sys_user_roles"},
 }
 
 /**
